@@ -1,0 +1,14 @@
+<!-- loading directive -->
+<mean-loading></mean-loading>
+
+<!-- header -->
+<div layout="row">
+    <md-toolbar layout="row" class="md-whiteframe-z1">
+        <md-button class="menu" hide-gt-sm
+                   ng-click="headerCtrl.toggleSideNav()"
+                   aria-label="Show User List">
+            <md-icon md-svg-icon="menu"></md-icon>
+        </md-button>
+        <h1 ng-bind="$state.current.data.pageTitle"></h1>
+    </md-toolbar>
+</div>

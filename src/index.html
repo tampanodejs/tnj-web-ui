@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="tnj">
+<head>
+    <title ng-bind="$state.current.data.pageTitle">MEAN-Enterprise</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+
+    <!-- inject:css -->
+    <!-- css placeholder -->
+    <!-- endinject -->
+</head>
+<body>
+<!-- nav and current view -->
+<div layout="row">
+    <!-- main navigation component -->
+    <mean-nav></mean-nav>
+
+    <div flex layout="column">
+        <!-- header component -->
+        <mean-header></mean-header>
+
+        <!-- current ui.router state -->
+        <div flex layout="column"
+             tabIndex="-1"
+             role="main"
+             class="md-whiteframe-z2"
+             ui-view="current"></div>
+    </div>
+</div>
+
+<!-- footer component -->
+<!--<mean-footer></mean-footer>-->
+
+<!-- vendor:js -->
+<!-- vendor placeholder -->
+<!-- endinject -->
+
+<!-- inject:js -->
+<!-- app and templates placeholder -->
+<!-- endinject -->
+</body>
+</html>

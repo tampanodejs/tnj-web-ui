@@ -1,0 +1,33 @@
+{
+  "name": "tnj-web-ui",
+  "version": "1.0.0",
+  "homepage": "https://ithub.com/tampanodejs/tnj-web-ui",
+  "authors": [
+    "Crafty"
+  ],
+  "description": "The AngularJS web UI for the tnj-runners mean-r solution!",
+  "main": "index.html",
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.3",
+    "angular-ui-router": "~0.2.13",
+    "angular-animate": "1.4.3",
+    "angular-mocks": "1.4.3",
+    "lodash": "~3.1.0",
+    "angular-messages": "1.4.3",
+    "angular-sanitize": "1.4.3",
+    "angular-material": "~0.10.0",
+    "angular-material-icons": "~0.5.0"
+  },
+  "resolutions": {
+    "angular": "1.4.3"
+  }
+}

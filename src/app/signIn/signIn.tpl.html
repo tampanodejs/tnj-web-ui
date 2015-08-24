@@ -1,0 +1,54 @@
+<md-dialog aria-label="Sign In">
+    <md-content class="md-padding">
+        <div ng-switch="signInCtrl.state">
+            <form name="signInForm" ng-switch-when="signIn" novalidate>
+                <md-subheader class="md-primary">Sign In</md-subheader>
+
+                <md-input-container flex><label>Email</label>
+                    <input ng-model="signInCtrl.user.email"
+                           type="email"></md-input-container>
+
+                <md-input-container flex><label>Password</label>
+                    <input ng-model="signInCtrl.user.password"
+                           type="password"></md-input-container>
+
+                <md-button class="md-raised md-primary"
+                           ng-click="signInCtrl.signIn(signInCtrl.user)">Sign In</md-button>
+
+                <md-button class="md-warn"
+                           ng-click="signInCtrl.setState('signUp')">
+                    Create Account
+                </md-button>
+            </form>
+
+            <form name="signInForm" ng-switch-when="signUp" novalidate>
+                <md-subheader class="md-primary">Create Account</md-subheader>
+
+                <md-input-container flex><label>User Name</label>
+                    <input ng-model="signInCtrl.user.username"
+                           type="text"></md-input-container>
+
+                <md-input-container flex><label>Email</label>
+                    <input ng-model="signInCtrl.user.email"
+                           type="email"></md-input-container>
+
+                <md-input-container flex><label>Password</label>
+                    <input ng-model="signInCtrl.user.password"
+                           type="password"></md-input-container>
+
+                <md-button class="md-raised md-primary"
+                           ng-click="signInCtrl.signUp(signInCtrl.user)">Sign Up</md-button>
+
+
+                <md-button class="md-warn"
+                           ng-click="signInCtrl.setState('signIn')">
+                    Sign In
+                </md-button>
+            </form>
+
+            <div class="md-actions" layout="row"><span flex></span>
+                <md-button ng-click="signInCtrl.cancel()">Cancel</md-button>
+            </div>
+        </div>
+    </md-content>
+</md-dialog>

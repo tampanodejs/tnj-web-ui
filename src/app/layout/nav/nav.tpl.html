@@ -1,0 +1,55 @@
+<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+            md-component-id="left"
+            md-is-locked-open="$mdMedia('gt-sm')">
+
+    <md-toolbar class="md-whiteframe-z1">
+        <h1>Side Nav</h1>
+    </md-toolbar>
+
+    <!-- sign in button -->
+    <md-button class="md-fab md-fab-top-right"
+               aria-label="Sign In"
+               ng-click="navCtrl.signIn($event)">
+        <ng-md-icon icon="login"></ng-md-icon>
+        <md-tooltip>Sign In</md-tooltip>
+    </md-button>
+
+    <!-- menu -->
+    <md-list>
+        <md-item ng-click="navCtrl.toggleList()">
+            <a ui-sref="{{navCtrl.states.DASH}}">
+                <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                    <div class="inset">
+                        <ng-md-icon icon="dashboard"></ng-md-icon>
+                    </div>
+                    <div class="inset">Dashboard
+                    </div>
+                </md-item-content>
+            </a>
+        </md-item>
+        <md-item ng-click="navCtrl.toggleList()">
+            <a ui-sref="{{navCtrl.states.USER}}">
+                <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                    <div class="inset">
+                        <ng-md-icon icon="group"></ng-md-icon>
+                    </div>
+                    <div class="inset">Users
+                    </div>
+                </md-item-content>
+            </a>
+        </md-item>
+        <md-divider></md-divider>
+    </md-list>
+
+    <!-- user list -->
+    <md-list>
+        <md-list-item ng-repeat="it in navCtrl.users">
+            <md-button ng-click="navCtrl.selectUser(it)"
+                       ng-class="{'selected' : it === navCtrl.selected }">
+                <md-icon md-svg-icon="{{it.avatar}}"
+                         class="avatar"></md-icon>
+                {{it.firstName}} {{it.lastName}}
+            </md-button>
+        </md-list-item>
+    </md-list>
+</md-sidenav>
