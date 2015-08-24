@@ -16,6 +16,6 @@ angular.module('tnj', [
   'tnj.util',
   'tnj.layout',
   'tnj.loading',
-  'tnj.user',
-  'tnj.dash'
+  'tnj.dash',
+  'tnj.user'
 ]);

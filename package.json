@@ -2,7 +2,7 @@
   "name": "tnj-web-ui",
   "version": "1.0.0",
   "description": "The AngularJS web UI for the tnj-runners mean-r solution!",
-  "homepage": "http://localhost/index.html",
+  "homepage": "http://localhost:8100",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
