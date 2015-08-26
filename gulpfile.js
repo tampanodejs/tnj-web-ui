@@ -270,7 +270,6 @@ gulp.task('vendor-js', function() {
  */
 gulp.task('build-css', function() {
   log(blue('generating the app\'s CSS from the scss'));
-
   var sassError = function(err) {
     log(red('Error compiling sass:' + JSON.stringify(err)));
     plug.util.beep();
