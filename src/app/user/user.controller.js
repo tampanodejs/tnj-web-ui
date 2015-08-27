@@ -1,3 +1,4 @@
+// jscs: disable
 /**
  * @module UserCtrl
  * @file controller for the user view
@@ -42,6 +43,27 @@ function UserCtrl($mdBottomSheet, $mdDialog, $log, userService) {
   // expose methods
   self.showContact = showContact;
   self.showAdd = showAdd;
+  self.fitnessActivities = [];
+  self.chartData = [];
+  self.chartLabels = [];
+
+  userService.findFitnessActivities(userService.getSelectedUser().userName)
+    .then(function(response) {
+      var chartData = _.map(response.data.items, function(fitnessActivity) {
+        fitnessActivity.distanceMiles = Math.round(0.000621371 * fitnessActivity.total_distance);
+        return Math.round(0.000621371 * fitnessActivity.total_distance);
+      });
+
+      var chartLabels = _.map(response.data.items, function(fitnessActivity) {
+        return fitnessActivity.start_time;
+      });
+
+      self.fitnessActivities = response.data.items;
+      self.chartData.push(chartData);
+      self.chartLabels = chartLabels;
+    }, function(err) {
+      $log.error(err);
+    });
 
   /**
    * @property user
@@ -112,3 +134,4 @@ function UserCtrl($mdBottomSheet, $mdDialog, $log, userService) {
     }
   }
 }
+// jscs: enable

@@ -12,6 +12,10 @@
     <h2>{{userCtrl.user.name}}</h2>
 
     <p>{{userCtrl.user.content}}</p>
+  <p>
+    And now a Chart.
+    <canvas id="line" class="chart chart-line chart-xl" data="userCtrl.chartData" labels="userCtrl.chartLabels" width="1000" height="400"></canvas>
+   </p>
 
     <md-button class="contact" md-no-ink
                ng-click="userCtrl.showContact($event)"

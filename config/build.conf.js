@@ -77,11 +77,14 @@ module.exports = {
       'vendor/angular-sanitize/angular-sanitize.min.js',
       'vendor/angular-material/angular-material.min.js',
       'vendor/angular-material-icons/angular-material-icons.min.js',
-      'vendor/lodash/lodash.min.js'
+      'vendor/lodash/lodash.min.js',
+      'vendor/Chart.js/Chart.min.js',
+      'vendor/angular-chart.js/dist/angular-chart.js'
     ],
     css: [
       'vendor/angular-material/angular-material.css',
-      'vendor/angular-material-icons/angular-material-icons.css'
+      'vendor/angular-material-icons/angular-material-icons.css',
+      'vendor/angular-chart.js/dist/angular-chart.min.css'
     ],
     assets: [],
     fonts: [

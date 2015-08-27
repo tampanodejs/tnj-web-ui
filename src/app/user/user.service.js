@@ -25,8 +25,18 @@ function userServiceImpl($http, environment, endpoints) {
     add: add,
     getSelectedUser: getSelectedUser,
     setSelectedUser: setSelectedUser,
-    loadAllUsers: loadAllUsers
+    loadAllUsers: loadAllUsers,
+    findFitnessActivities: findFitnessActivities
   };
+
+  function findFitnessActivities(userName) {
+    var request = {
+      method: 'GET',
+      url: 'http://localhost:7200/api/runkeeper/runners/fitness_activities?user_name=' + userName
+    };
+
+    return $http(request);
+  }
 
   /**
    * @method loadAllUsers
